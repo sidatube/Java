@@ -1,5 +1,7 @@
 package com.company;
 
+import lap1.Lap1;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -15,12 +17,16 @@ public class Main {
 //        for (int i=0;i<10;i++){
 //            System.out.println("i="+i);
 //        }
-        Student st;// khai bao1 bien cos kieu du lieu student
-        st= new Student();// tao doi tuong
-        Student st2 = new Student();
-        st.name = "Nguyen Du";
-        st2.name= "Nguyen Hue";
-        st.run();
-        st2.run();
+//        Student st;// khai bao1 bien cos kieu du lieu student
+//        st= new Student();// tao doi tuong
+//        Student st2 = new Student();
+//        st.name = "Nguyen Du";
+//        st2.name= "Nguyen Hue";
+//        st.run();
+//        st2.run();
+    Lap1 sp1 = new Lap1();
+    Lap1 sp2 = new Lap1();
+    Lap1 sp3 = new Lap1();
+
     }
 }
