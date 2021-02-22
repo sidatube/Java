@@ -1,6 +1,6 @@
 package com.company;
 
-import lap1.Lap1;
+import lap.l1.Lap1;
 
 public class Main {
 

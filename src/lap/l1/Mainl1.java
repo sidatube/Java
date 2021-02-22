@@ -1,4 +1,4 @@
-package lap1;
+package lap.l1;
 
 public class Mainl1 {
     public static void main(String[] args) {
