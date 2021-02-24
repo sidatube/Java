@@ -2,7 +2,7 @@ package As.a2;
 
 import java.util.Scanner;
 
-public class As2 {
+public class phanso {
     private int tuso;
     private int mauso;
 
@@ -19,76 +19,77 @@ public class As2 {
     }
 
     public void setMauso(int mauso) {
-        this.mauso = mauso;
-    }
-    private int tuso2;
-    private  int mauso2;
-
-    public int getTuso2() {
-        return tuso2;
+        this.mauso = mauso!=0?mauso:1;
     }
 
-    public void setTuso2(int tuso2) {
-        this.tuso2 = tuso2;
-    }
-
-    public int getMauso2() {
-        return mauso2;
-    }
-
-    public void setMauso2(int mauso2) {
-        this.mauso2 = mauso2;
+    public  void nhapPS(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("nhap tu so");
+        setMauso(sc.nextInt());
+        System.out.println("Nhap mau so");
+        setMauso(sc.nextInt());
     }
 
     public void inPS(){
         System.out.println("Phan so 1 la: "+getTuso()+"/"+getMauso());
-        System.out.println("Phan so 2 la: "+getTuso2()+"/"+getMauso2());
     }
-    public  int UCLN(int a,int b){
-        a=Math.abs(a);
-        b=Math.abs(b);
-        while (a!=b){
-            if(a>b) a=a-b;
-            else b=b-a;
+    public  int UCLN(){
+        for(int i=Math.min(getTuso(),getMauso());i>0;i--){
+            if(getTuso()%i==0&&getTuso()%i==0)return i;
+
         }
-        return a;
+        return 1;
     }
-    public  void rutGon(int a , int b){
-        if(a==0){
-            System.out.println("Phan so thu 1 khong the rut gon");
-        }else {
-            int c = UCLN(a, b);
-            a = a / c;
-            b = b / c;
-            System.out.println( a + "/" + b);
-        }
+    public void rutGon(){
+        // tim UCLN cua tu so va mau so
+        int ucln = UCLN();
+        setTuso(getTuso()/ucln);
+        setMauso(getMauso()/ucln);
     }
-    public  void nghichDao(int a,int b){
-        if(a==0){
-            System.out.println("Phan so thu 1 ko co phan so nghich dao");
+    public  void nghichDao(){
+        int ms= getMauso();
+        if(getTuso()!=0){
+            setMauso(getTuso());
+            setTuso(ms);
         }else{
-            System.out.println("Phan so ngich dao cua phan so la: "+b+"/"+a);
+            System.out.println("Khong the nghich dao");
         }
 
     }
-    public void add(){
-        int tutong = tuso*mauso2+tuso2*mauso;
-        int mautong = mauso*mauso2;
-        rutGon(tutong,mautong);
+    public phanso add(phanso ft){
+        int tutong = this.getTuso()*ft.getMauso()+ft.getTuso()*this.getMauso();
+        int mautong = this.getMauso()*ft.getMauso();
+        phanso tong =new phanso();
+        tong.setTuso(tutong);
+        tong.setMauso(mautong);
+        tong.rutGon();
+        return tong;
     }
-    public void sub(){
-        int tuhieu = tuso*mauso2-tuso2*mauso;
-        int mauhieu = mauso*mauso2;
-        rutGon(tuhieu,mauhieu);
+    public phanso sub(phanso ft){
+        int tu = this.getTuso()*ft.getMauso()-ft.getTuso()*this.getMauso();
+        int mau = this.getMauso()*ft.getMauso();
+        phanso hieu =new phanso();
+        hieu.setTuso(tu);
+        hieu.setMauso(mau);
+        hieu.rutGon();
+        return hieu;
     }
-    public void mul(){
-        int tutich=tuso*tuso2;
-        int mautich=mauso*mauso2;
-        rutGon(tutich,mautich);
+    public phanso mul(phanso ft){
+        int tu = this.getTuso()*ft.getTuso();
+        int mau = this.getMauso()*ft.getMauso();
+        phanso tich = new phanso();
+        tich.setTuso(tu);
+        tich.setMauso(mau);
+        tich.rutGon();
+        return  tich;
     }
-    public void div(){
-        int tuthuong=tuso*mauso2;
-        int mauthuong=mauso*tuso2;
-        rutGon(tuthuong,mauthuong);
+    public phanso div(phanso ft){
+        int tu = this.getTuso()*ft.getMauso();
+        int mau = this.getMauso()*ft.getTuso();
+        phanso thuong = new phanso();
+        thuong.setTuso(tu);
+        thuong.setMauso(mau);
+        thuong.rutGon();
+        return  thuong;
     }
 }
