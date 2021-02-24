@@ -6,13 +6,13 @@ public class main {
     public static void main(String[] args){
 
 
-        phanso bt = new phanso();
+        As2 bt = new As2();
         bt.setTuso(5);
         bt.setMauso(6);
-        phanso bt2 = new phanso();
+        As2 bt2 = new As2();
         bt2.setTuso(5);
         bt2.setMauso(10);
-        phanso t =bt.add(bt2);
+        As2 t =bt.add(bt2);
         t.inPS();
     }
 

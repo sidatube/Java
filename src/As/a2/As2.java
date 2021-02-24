@@ -2,7 +2,7 @@ package As.a2;
 
 import java.util.Scanner;
 
-public class phanso {
+public class As2 {
     private int tuso;
     private int mauso;
 
@@ -56,37 +56,37 @@ public class phanso {
         }
 
     }
-    public phanso add(phanso ft){
+    public As2 add(As2 ft){
         int tutong = this.getTuso()*ft.getMauso()+ft.getTuso()*this.getMauso();
         int mautong = this.getMauso()*ft.getMauso();
-        phanso tong =new phanso();
+        As2 tong =new As2();
         tong.setTuso(tutong);
         tong.setMauso(mautong);
         tong.rutGon();
         return tong;
     }
-    public phanso sub(phanso ft){
+    public As2 sub(As2 ft){
         int tu = this.getTuso()*ft.getMauso()-ft.getTuso()*this.getMauso();
         int mau = this.getMauso()*ft.getMauso();
-        phanso hieu =new phanso();
+        As2 hieu =new As2();
         hieu.setTuso(tu);
         hieu.setMauso(mau);
         hieu.rutGon();
         return hieu;
     }
-    public phanso mul(phanso ft){
+    public As2 mul(As2 ft){
         int tu = this.getTuso()*ft.getTuso();
         int mau = this.getMauso()*ft.getMauso();
-        phanso tich = new phanso();
+        As2 tich = new As2();
         tich.setTuso(tu);
         tich.setMauso(mau);
         tich.rutGon();
         return  tich;
     }
-    public phanso div(phanso ft){
+    public As2 div(As2 ft){
         int tu = this.getTuso()*ft.getMauso();
         int mau = this.getMauso()*ft.getTuso();
-        phanso thuong = new phanso();
+        As2 thuong = new As2();
         thuong.setTuso(tu);
         thuong.setMauso(mau);
         thuong.rutGon();
