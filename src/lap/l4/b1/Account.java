@@ -43,7 +43,7 @@ public class Account {
     }
 
     public boolean debit(int a){
-        if(a<=getBalance()){
+        if(a>0&&a<=getBalance()){
             setBalance(getBalance()-a);
             return true;
         }
@@ -55,7 +55,6 @@ public class Account {
         System.out.println("Nhap so tien can chuyen: ");
         int z= sc.nextInt();
         if (this.debit(z)){
-
             B.setBalance(getBalance()+z);
             return true;
         }else {
