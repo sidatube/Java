@@ -1,4 +1,4 @@
-package lap.l4;
+package lap.l4.b1;
 
 import java.util.Scanner;
 

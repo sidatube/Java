@@ -1,4 +1,6 @@
-package lap.l4;
+package lap.l4.b1;
+
+import lap.l4.b1.Account;
 
 import java.util.Scanner;
 
