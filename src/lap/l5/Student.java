@@ -1,5 +1,7 @@
 package lap.l5;
 
+import java.util.Scanner;
+
 public class Student extends Person{
     int code;
     double diem;
@@ -28,7 +30,17 @@ public class Student extends Person{
     public void setMail(String mail) {
         this.mail = mail;
     }
+    public void input(){
+        super.input();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ma so:");
+        setCode(sc.nextInt());
+        System.out.println("Diem thi:");
+        setDiem(sc.nextDouble());
+        System.out.println("Email:");
+        setMail(sc.nextLine());
 
+    }
 
     public void print() {
         super.print();
@@ -37,8 +49,6 @@ public class Student extends Person{
         System.out.println("Email: "+this.getMail());
     }
     public boolean hocBong(){
-        if (this.getDiem()>8.0){
-            return true;
-        }return false;
+        return getDiem()>8;
     }
 }

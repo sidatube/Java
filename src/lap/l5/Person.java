@@ -2,6 +2,7 @@ package lap.l5;
 
 import javax.lang.model.element.NestingKind;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Person {
     String name;
@@ -10,6 +11,13 @@ public class Person {
     String diaChi;
 
     public Person() {
+    }
+
+    public Person(String name, String sex, String date, String diaChi) {
+        this.name = name;
+        this.sex = sex;
+        this.date = date;
+        this.diaChi = diaChi;
     }
 
     public String getName() {
@@ -42,6 +50,21 @@ public class Person {
 
     public void setDiaChi(String diaChi) {
         this.diaChi = diaChi;
+    }
+    public void input(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ho va ten: ");
+        String n = sc.nextLine();
+        setName(n);
+        System.out.println("Gioi tinh");
+        String a = sc.nextLine();
+        setSex(a);
+        System.out.println("Ngay sinh");
+        String b = sc.nextLine();
+        setDate(b);
+        System.out.println("Dia chi");
+        String c = sc.nextLine();
+        setDiaChi(c);
     }
     public void print(){
         System.out.println("Ho va ten: "+this.getName());
