@@ -19,8 +19,8 @@ public class Phonebook extends Phone{
                 if (!p.getPhone().contains(phone)) {// kiem tra co trong danh sach hay chua
                     p.addPhone(phone);
                 }
+                return;
             }
-            return;
         }
         ListP p = new ListP(name,phone);
         phoneList.add(p);
@@ -69,5 +69,13 @@ public class Phonebook extends Phone{
                 return o1.getName().compareTo(o2.getName());
             }
         });
+    }
+    public void printPhoneList(){
+        for(ListP p :phoneList){
+            System.out.println(p.getName());
+            for(String s:p.getPhone()){
+                System.out.println(s);
+            }
+        }
     }
 }
