@@ -91,7 +91,8 @@ public class Quanlysv implements Menu{
                 System.out.println("Nhap tuoi:");
                 s.setAge(sc.nextInt());
                 System.out.println("Nhap dia chi:");
-                s.setAddress(sc.nextLine());
+                s.setAddress(sc.next());
+                sc.nextLine();
                 System.out.println("Nhap diem tb:");
                 s.setGpa(sc.nextDouble());
                 System.out.println("Da fix");
