@@ -122,7 +122,7 @@ public class Quanlysv implements Menu{
         Collections.sort(Svlist, new Comparator<Sinhvien>() {
             @Override
             public int compare(Sinhvien o1, Sinhvien o2) {
-                return (int)o2.getGpa()-(int)o1.getGpa();
+                return (o2.getGpa()-o1.getGpa()>0)?1:-1;
             }
         });
         System.out.println("Da xep theo Gpa");
